@@ -2,6 +2,8 @@
 const list = document.getElementById("list");
 const input = document.getElementById("input");
 
+const dateElement = document.getElementById("date");
+
 // Classes names
 const CHECK = "fa-check-circle";
 const UNCHECK = "fa-circle-thin";
@@ -12,7 +14,11 @@ let LIST, id;
 
 
     LIST = [];
-    id = 0;
+//Date
+const options = {weekday : "long", month:"short", day:"numeric"};
+const today = new Date();
+
+dateElement.innerHTML = today.toLocaleDateString("en-US", options);
  
 
 
