@@ -10,7 +10,7 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
 
 // Variables
-let LIST, id;
+let LIST;
 
 
     LIST = [];
@@ -20,9 +20,6 @@ const today = new Date();
 
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
  
-
-
-
 // add to do function
 
 function addToDo(toDo){
@@ -52,9 +49,7 @@ document.addEventListener("keyup",function(even){
             LIST.push({
                 name : toDo
             });
-            
-            // add item to localstorage ( this code must be added where the LIST array is updated)
-          
+                 
         }
         input.value = "";
     }
@@ -86,8 +81,6 @@ list.addEventListener("click", function(event){
     }else if(elementJob == "delete"){
         removeToDo(element);
     }
-    
-    // add item to localstorage ( this code must be adde
 });
 
 
